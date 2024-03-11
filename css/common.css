@@ -18,3 +18,33 @@ ul, li  {
   list-style-type: none;
 }
 
+#categories {
+  background-color: #F6F6FE;
+  width: 392px;
+}
+
+.item > ul >li {
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+#categories > ul {
+  display: flex;
+  gap: 25px;
+}
+
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gallery > li > img{
+
+
+  width: 360px;
+  height: 230px;
+  
+}
+
