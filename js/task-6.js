@@ -23,29 +23,30 @@ function createBoxes() {
   const value = input.value;
   
   const array = [];
-  
-  let boxSize = 20;
-  
-  for (let i = 1; i <= value; i++) {
 
-    if (i <= 100) {
-      boxSize += 10;
+  let boxSize = 30;
+
+  if (value >= 1 && value <= 100) {
+    
+    for (let i = 1; i <= value; i++) {
+
+    
 
     let newDiv = `<div style="width: ${boxSize}px; height: ${boxSize}px; background-color: ${getRandomHexColor()}"> </div>
     </div>`
+      
+      
+    boxSize += 10;
 
-    array.push(newDiv);
-    } else {
-      return alert('Amount is not correct')
-    }
-
-    input.value = '';
-    
+    array.push(newDiv);  
   }
 
-  boxesEl.textContent = '';
-  
+  } else {
+      return alert('Amount is not correct')
+  }
 
+  input.value = '';
+  boxesEl.textContent = '';
 
   boxesEl.insertAdjacentHTML('afterbegin',array.join(''))
   
